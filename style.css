@@ -7,3 +7,10 @@
     font-size: 100px;
     color: #112131;
 }
+
+.display-1 {
+    color: tomato;
+    /* text-transform: uppercase; */
+    /* text-transform: lowercase; */
+    text-transform: capitalize;
+}
