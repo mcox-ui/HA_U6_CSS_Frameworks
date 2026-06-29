@@ -1,0 +1,82 @@
+<!doctype html>
+<!-- <html lang="en" data-bs-theme="dark"> -->
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Frameworks III</title>
+
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <button id="themeToggle" class="btn btn-outline-secondary btn-sm mt-3 ms-3" type="button">
+        Cambiar a dark mode
+    </button>
+
+    <h1><i class="bi bi-steam"></i> Hello, world!</h1>
+
+    <i class="bi bi-steam"></i>
+
+    <section class="container">
+        <!-- SECTION CONTAINER -->
+
+        <form action="www.formspark.com/dsdd322234" method="POST" class="mi-formulario p-3">
+
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+
+            <label for="exampleColorInput" class="form-label">Color picker</label>
+            <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c"
+                title="Choose your color">
+
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar ahora</button>
+
+        </form>
+
+    </section>
+
+    <div class="caintainer">
+        <!-- DIV CONTAINER  -->
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const root = document.documentElement;
+        const savedTheme = localStorage.getItem('theme');
+
+        if (savedTheme) {
+            root.setAttribute('data-bs-theme', savedTheme);
+            themeToggle.textContent = savedTheme === 'dark' ? 'Cambiar a light mode' : 'Cambiar a dark mode';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = root.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';
+            root.setAttribute('data-bs-theme', currentTheme);
+            localStorage.setItem('theme', currentTheme);
+            themeToggle.textContent = currentTheme === 'dark' ? 'Cambiar a light mode' : 'Cambiar a dark mode';
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
